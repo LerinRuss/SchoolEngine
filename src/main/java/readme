@@ -1,0 +1,4 @@
+Project comments have written with Russian language. For writing russian comments used UTF-8 encoding.
+
+Программа представляет собой наброски движка для игры. Расстановка объектов происходит с помощью клавиатуры и мыши.
+Запуск программы происходит в клссе main\Main, UI программы использует библиотеку awt
