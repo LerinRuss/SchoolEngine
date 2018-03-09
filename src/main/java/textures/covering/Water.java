@@ -3,7 +3,6 @@ package textures.covering;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import loader.LoaderTextures;
 import main.Main;
 import map.SizeField;
 /**

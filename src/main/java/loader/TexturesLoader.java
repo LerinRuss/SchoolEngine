@@ -6,21 +6,16 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import main.Main;
-/**
- * Класс загружает текстуры  в память, которые потом будут добавляться в игре
- * 
- * @author Viteker
- * @version 0.4
- */
-public class LoaderTextures {
+import loader.exception.LoaderTexturesException;
+
+public class TexturesLoader {
 	private final LoaderTexturesNatureAndConstraction NATURE_AND_CONSTRACTION = new LoaderTexturesNatureAndConstraction();
-	private final LoaderUnitTextures UNIT_TEXTURE = new LoaderUnitTextures();
+	private final UnitTextureLoader UNIT_TEXTURE = new UnitTextureLoader();
 	
 	public LoaderTexturesNatureAndConstraction getNatureAndContruction(){
 		return NATURE_AND_CONSTRACTION;
 	}
-	public LoaderUnitTextures getUnit(){
+	public UnitTextureLoader getUnit(){
 		return UNIT_TEXTURE;
 	}
 	public class LoaderTexturesNatureAndConstraction{
@@ -74,42 +69,6 @@ public class LoaderTextures {
 		}
 		public BufferedImage getWater(){
 			return water;
-		}
-	}
-	public class LoaderUnitTextures{
-		/**
-		 * Текстура тестового игрока
-		 */
-		private BufferedImage test_unit;
-		/**
-		 * Загружаем текстуры в игру
-		 * @throws IOException - ошибка загрузки текстуры
-		 */
-		public void loadTextures() throws LoaderTexturesException{
-			try {
-				test_unit = ImageIO.read(new File("textures\\units\\test_unit\\stand.png"));
-			} catch (IOException e) {
-				throw new LoaderTexturesException("Ошибка загрузки текстур");
-			}
-			
-		}
-		public BufferedImage getTestUnit(){
-			return test_unit;
-		}
-	}
-	/**
-	 * Исключение создающееся при ошибке загрузки текстур
-	 * @author Viteker
-	 * @version 0.0
-	 */
-	public class LoaderTexturesException extends IOException{
-		/**
-		 * 
-		 */
-		private static final long serialVersionUID = 8689222351271398825L;
-
-		private LoaderTexturesException(String s){
-			super(s);
 		}
 	}
 }

@@ -4,10 +4,9 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.Serializable;
 
-import loader.LoaderTextures;
 import main.Main;
 import map.SizeField;
-import textures.Cell;
+
 /**
  * Класс представляющий собой просто зеленую траву
  * @author Viteker

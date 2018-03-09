@@ -6,7 +6,6 @@ import units.Creature;
 
 public class Calm implements AI{
 
-	@Override
 	public AI doing(Creature creature,Collection<Creature> enemies) {
 		int distance;
 		for (Creature current : enemies) {

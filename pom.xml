@@ -6,4 +6,5 @@
 
     <groupId>my.project</groupId>
     <artifactId>engine2</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 </project>

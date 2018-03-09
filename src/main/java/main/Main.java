@@ -2,14 +2,15 @@ package main;
 
 import java.awt.Dimension;
 
-import addition_in_engine.AdditionCreatures;
-import addition_in_engine.LoupeTransformation;
+import addition.CreatureAddition;
+import addition.LoupeTransformation;
 import control.KeyControl;
 import control.MouseControl;
 import control.MouseMotionControl;
 import controler.Controler;
-import loader.LoaderTextures;
-import loader.LoaderTextures.LoaderTexturesException;
+import loader.TexturesLoader;
+import loader.TexturesLoader.LoaderTextureException;
+import loader.exception.LoaderTexturesException;
 import log.Log;
 import map.Map;
 import structs.ListActionCreatures;
@@ -30,7 +31,7 @@ public class Main {
 	/**
 	 * Текстуры в игре
 	 */
-	public static LoaderTextures textures;
+	public static TexturesLoader textures;
 	/**
 	 * Живые существа в игре
 	 */
@@ -72,7 +73,7 @@ public class Main {
 	 * загружаем текстуры
 	 */
 	private static void loadTextures(){
-		textures = new LoaderTextures();
+		textures = new TexturesLoader();
 		try {
 			textures.getNatureAndContruction().loadTextures();
 			textures.getUnit().loadTextures();
@@ -104,7 +105,7 @@ public class Main {
 		
 		
 		LoupeTransformation loupe = new LoupeTransformation(gmap.getLoupe());
-		AdditionCreatures addCreatures = new AdditionCreatures(loupe);
+		CreatureAddition addCreatures = new CreatureAddition(loupe);
 		MouseControl mouseControl = new MouseControl(loupe);
 		
 		gmap.addMouseMotionListener(new MouseMotionControl(addCreatures,loupe));

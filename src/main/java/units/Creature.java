@@ -110,25 +110,19 @@ public abstract class Creature implements CreatureAction,MouseControlled,Integer
 	 * false - нет
 	 */
 	public boolean isTarget(){
-		return target == null ? false : true;
+		return target != null;
 	}
 	public boolean isHidden(){
 		return hidden;
 	}
-	@Override
 	public int getX() {
-		// TODO Auto-generated method stub
 		return (int) x;
 	}
 
-	@Override
 	public int getY() {
-		// TODO Auto-generated method stub
 		return (int) y;
 	}
-	@Override
 	public IntegerCoordinates getCoordinates() {
-		// TODO Auto-generated method stub
 		return new Coordinates(getX(), getY());
 	}
 	
@@ -164,7 +158,6 @@ public abstract class Creature implements CreatureAction,MouseControlled,Integer
 	 */
 	public class Passability implements IPassability{
 
-		@Override
 		public boolean checkPassability(Cell cell) {
 			if(cell instanceof Wall || cell instanceof Water)
 				return false;

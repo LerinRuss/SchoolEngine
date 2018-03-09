@@ -3,8 +3,8 @@ package control;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 
-import addition_in_engine.AdditionCreatures;
-import addition_in_engine.LoupeTransformation;
+import addition.CreatureAddition;
+import addition.LoupeTransformation;
 import coordinates.Coordinates;
 import log.Log;
 import main.Main;
@@ -19,7 +19,7 @@ public class MouseMotionControl extends Control implements MouseMotionListener{
 	/*
 	 * Добавление в игру разных существ, когда нажимает клавишу мыши
 	 */
-	private AdditionCreatures addCreature;
+	private CreatureAddition addCreature;
 	/*
 	 * Преобразование координат, относительно лупы
 	 */
@@ -28,7 +28,7 @@ public class MouseMotionControl extends Control implements MouseMotionListener{
 	 * Базовый конструктор инициализации полей
 	 * @param loupe 
 	 */
-	public MouseMotionControl(AdditionCreatures addCreature, LoupeTransformation loupe){
+	public MouseMotionControl(CreatureAddition addCreature, LoupeTransformation loupe){
 		super();
 		this.addCreature = addCreature;
 		this.loupe = loupe;
@@ -42,14 +42,14 @@ public class MouseMotionControl extends Control implements MouseMotionListener{
 		*/
 		if(cell!=null){
 			try {
-				Main.mp.add(loupe.transformateCoordinates(e.getX(), e.getY()), cell.clone());
+				Main.mp.add(loupe.transformCoordinates(e.getX(), e.getY()), cell.clone());
 			} catch (CloneNotSupportedException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		}else if(tree != null){
 			try {
-				Main.mp.addObjects(loupe.transformateCoordinates(e.getX(), e.getY()), tree.clone());
+				Main.mp.addObjects(loupe.transformCoordinates(e.getX(), e.getY()), tree.clone());
 			} catch (CloneNotSupportedException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

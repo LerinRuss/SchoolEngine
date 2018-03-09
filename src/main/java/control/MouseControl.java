@@ -3,14 +3,10 @@ package control;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import addition_in_engine.AdditionCreatures;
-import addition_in_engine.LoupeTransformation;
-import coordinates.Coordinates;
-import log.Log;
+import addition.LoupeTransformation;
 import main.Main;
 import units.Creature;
-import units.TestAlly;
-import units.TestUnit;
+
 /**
  * !!!СОБИРАЮТ И ПОДАЮТ ИНФОРМАЦИЮ!!!
  * 
@@ -45,7 +41,7 @@ public class MouseControl extends Control implements MouseListener{
 	public void mousePressed(MouseEvent e) {
 		Creature hero = Main.creatures.getHero();
 		if(e.getButton() == MouseEvent.BUTTON3 && hero != null){
-			hero.moveTo(loupe.transformateCoordinates(e.getX(), e.getY()));//Не забывай преобразовывать координаты относительно лупы
+			hero.moveTo(loupe.transformCoordinates(e.getX(), e.getY()));//Не забывай преобразовывать координаты относительно лупы
 		}
 	}
 
