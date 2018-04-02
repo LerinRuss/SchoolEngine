@@ -1,4 +1,4 @@
-package loader;
+package package1.loader;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import loader.exception.LoaderTexturesException;
+import package1.exception.LoaderTexturesException;
 
 public class TexturesLoader {
 	private final LoaderTexturesNatureAndConstraction NATURE_AND_CONSTRACTION = new LoaderTexturesNatureAndConstraction();
@@ -18,6 +18,7 @@ public class TexturesLoader {
 	public UnitTextureLoader getUnit(){
 		return UNIT_TEXTURE;
 	}
+
 	public class LoaderTexturesNatureAndConstraction{
 		/**
 		 * Текстура травы в игре
@@ -45,13 +46,14 @@ public class TexturesLoader {
 		 */
 		public void loadTextures() throws LoaderTexturesException{
 			try {
-				grass = ImageIO.read(new File("textures\\grass.png"));
-				wall = ImageIO.read(new File("textures\\wall.png"));
-				water = ImageIO.read(new File("textures\\water.png"));
-				sand = ImageIO.read(new File("textures\\sand.png"));
-				floor = ImageIO.read(new File("textures\\floor.png"));
+				File absolute = new File("").getAbsoluteFile();
+				grass = ImageIO.read(new File(absolute, "/textures1/grass.png"));
+				wall = ImageIO.read(new File(absolute, "/textures1/wall.png"));
+				water = ImageIO.read(new File(absolute, "/textures1/water.png"));
+				sand = ImageIO.read(new File(absolute, "/textures1/sand.png"));
+				floor = ImageIO.read(new File(absolute, "/textures1/floor.png"));
 			} catch (IOException e) {
-				throw new LoaderTexturesException("Ошибка загрузки текстур");
+				throw new LoaderTexturesException("Ошибка загрузки текстур", e);
 			}
 			
 		}
