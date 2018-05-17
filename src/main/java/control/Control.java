@@ -1,7 +1,7 @@
 package control;
 
-import textures.Cell;
-import textures.covering.Tree;
+import textures1.Cell;
+import textures1.covering.Tree;
 import units.Creature;
 /**
  * Класс представляет собой управление игрока

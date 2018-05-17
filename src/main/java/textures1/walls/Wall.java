@@ -1,4 +1,4 @@
-package textures.walls;
+package textures1.walls;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 import main.Main;
 import map.SizeField;
-import textures.Cell;
+import textures1.Cell;
 /**
  * Класс представляет собой стену со своими координатами
  * и своей текстурой

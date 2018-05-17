@@ -1,8 +1,8 @@
-package textures.covering;
+package textures1.covering;
 
 import java.awt.image.BufferedImage;
 
-import textures.Cell;
+import textures1.Cell;
 /**
  * Абстрактный класс разветвляющий иерархию {@link Cell}
  * @author Viteker

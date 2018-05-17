@@ -2,8 +2,7 @@ package structs;
 
 import java.util.LinkedList;
 
-import other.CreatureAction;
-import textures.covering.Tree;
+import textures1.covering.Tree;
 
 public class ListActionObjects {
 	/*

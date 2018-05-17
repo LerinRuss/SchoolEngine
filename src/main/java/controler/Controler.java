@@ -8,7 +8,7 @@ import java.util.ListIterator;
 import javax.swing.Timer;
 
 import main.Main;
-import textures.covering.Tree;
+import textures1.covering.Tree;
 import units.Creature;
 import window.GameMap;
 /**

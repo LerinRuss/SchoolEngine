@@ -18,17 +18,13 @@ import coordinates.Coordinates;
 import coordinates.IntegerCoordinates;
 import main.Main;
 import map.SizeField;
-import textures.covering.Grass;
+import textures1.covering.Grass;
 /**
  * 
  * @author Viteker
  * @version 0.4
  */
 public class GameMap extends Canvas {
-	/*
-	 * Temp
-	 */
-	private BufferedImage keyList;//Список клавиш, слева на экране
 	/*
 
 	 */
@@ -47,15 +43,6 @@ public class GameMap extends Canvas {
 	 */
 	public void setBackground(int width,int height){
 		background=new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-		/*
-		 * Temp
-		 */
-		try {
-			keyList = ImageIO.read(new File("temp\\keyList.png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	public Graphics getBackgroundGraphics(){
 		return background.getGraphics();
@@ -87,9 +74,6 @@ public class GameMap extends Canvas {
 	 * И гр объектом нашего компонента отрисовываем фон background
 	 */
 	public void paint(Graphics g){
-		//Пишем на экране значения клавиш
-		g.drawImage(keyList, 21, 21, null);
-
 		int width=background.getWidth(),
 				height=background.getHeight();
 		cursor.drawCursor(Control.x+loupe.x, Control.y+loupe.y,g);
@@ -168,7 +152,8 @@ public class GameMap extends Canvas {
 				Toolkit toolkit = Toolkit.getDefaultToolkit();
 				BufferedImage image = null;
 				try {
-					image = ImageIO.read(new File("textures\\cursor\\chop.png"));
+					final File parent = new File("").getAbsoluteFile();
+					image = ImageIO.read(new File(parent,"/textures/cursor/chop.png"));
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

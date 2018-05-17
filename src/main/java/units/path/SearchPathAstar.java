@@ -5,11 +5,10 @@ import java.util.PriorityQueue;
 
 import coordinates.Coordinates;
 import coordinates.IntegerCoordinates;
-import main.Main;
 import map.SizeField;
-import textures.Cell;
-import textures.covering.Grass;
-import textures.walls.Wall;
+import textures1.Cell;
+import textures1.covering.Grass;
+import textures1.walls.Wall;
 import units.IPassability;
 
 /**

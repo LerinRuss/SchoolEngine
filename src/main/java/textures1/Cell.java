@@ -1,4 +1,4 @@
-package textures;
+package textures1;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;

@@ -1,4 +1,4 @@
-package textures.covering;
+package textures1.covering;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -6,29 +6,29 @@ import java.awt.image.BufferedImage;
 import main.Main;
 import map.SizeField;
 /**
- * Класс представляющий собой песок
+ * Класс представляющий собой пол
  * @author Viteker
  * @version 0.2
  */
-public class Sand extends Covering{
+public class Floor extends Covering{
 	/**
-	 * Конструктор создает песок в заданных координатах
+	 * Конструктор создает пол в заданных координатах
 	 * и с заданным размером
 	 * @param x
 	 * @param y
 	 * @param size
 	 */
-	public Sand(int x, int y, BufferedImage texture) {
+	public Floor(int x, int y, BufferedImage texture) {
 		super(x, y, texture);
 		// TODO Auto-generated constructor stub
 	}
 	/**
 	 * Конструктор по умалчанию,
 	 * указывает нулевые координаты и нулевой размер,
-	 * а текстуру загружает сам, соответствующую для песка
+	 * а текстуру загружает сам, соответствующую для пола
 	 */
-	public Sand(){
-		this(0,0,Main.textures.getNatureAndContruction().getSand());
+	public Floor(){
+		this(0,0,Main.textures.getNatureAndContruction().getFloor());
 	}
 	@Override
 	public void paint(Graphics g) {
@@ -37,7 +37,8 @@ public class Sand extends Covering{
 
 	@Override
 	public void setDefaultTexture() {
-		texture = Main.textures.getNatureAndContruction().getSand();
+		texture = Main.textures.getNatureAndContruction().getFloor();
 	}
+
 
 }

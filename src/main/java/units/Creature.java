@@ -2,17 +2,15 @@ package units;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.util.Iterator;
 
 import control.MouseControlled;
 import coordinates.Coordinates;
 import coordinates.IntegerCoordinates;
 import map.SizeField;
 import other.CreatureAction;
-import textures.Cell;
-import textures.covering.Grass;
-import textures.covering.Water;
-import textures.walls.Wall;
+import textures1.Cell;
+import textures1.covering.Water;
+import textures1.walls.Wall;
 import units.path.ISearchPath;
 import units.path.Node;
 import units.path.SearchPathAstar;

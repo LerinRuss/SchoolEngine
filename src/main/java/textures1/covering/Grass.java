@@ -1,4 +1,4 @@
-package textures.covering;
+package textures1.covering;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;

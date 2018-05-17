@@ -2,7 +2,7 @@ package other;
 
 import java.util.ListIterator;
 
-import textures.covering.Tree;
+import textures1.covering.Tree;
 
 public interface TreeAction {
 	/**

@@ -1,7 +1,7 @@
 package units.path;
 
 import coordinates.IntegerCoordinates;
-import textures.Cell;
+import textures1.Cell;
 import units.IPassability;
 
 public interface ISearchPath {

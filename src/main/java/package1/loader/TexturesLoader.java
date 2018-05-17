@@ -47,11 +47,11 @@ public class TexturesLoader {
 		public void loadTextures() throws LoaderTexturesException{
 			try {
 				File absolute = new File("").getAbsoluteFile();
-				grass = ImageIO.read(new File(absolute, "/textures1/grass.png"));
-				wall = ImageIO.read(new File(absolute, "/textures1/wall.png"));
-				water = ImageIO.read(new File(absolute, "/textures1/water.png"));
-				sand = ImageIO.read(new File(absolute, "/textures1/sand.png"));
-				floor = ImageIO.read(new File(absolute, "/textures1/floor.png"));
+				grass = ImageIO.read(new File(absolute, "/textures/grass.png"));
+				wall = ImageIO.read(new File(absolute, "/textures/wall.png"));
+				water = ImageIO.read(new File(absolute, "/textures/water.png"));
+				sand = ImageIO.read(new File(absolute, "/textures/sand.png"));
+				floor = ImageIO.read(new File(absolute, "/textures/floor.png"));
 			} catch (IOException e) {
 				throw new LoaderTexturesException("Ошибка загрузки текстур", e);
 			}

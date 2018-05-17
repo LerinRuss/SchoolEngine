@@ -9,11 +9,11 @@ import coordinates.Coordinates;
 import coordinates.IntegerCoordinates;
 import log.Log;
 import main.Main;
-import textures.Cell;
-import textures.covering.Grass;
-import textures.covering.Tree;
-import textures.covering.Water;
-import textures.walls.Wall;
+import textures1.Cell;
+import textures1.covering.Grass;
+import textures1.covering.Tree;
+import textures1.covering.Water;
+import textures1.walls.Wall;
 
 /**
  * Игровая карта на которой размещены все статические объекты и именно отсюда
@@ -58,8 +58,8 @@ public class Map implements Serializable, SizeField {
 
 	/**
 	 * Инициализирует массив {@link Map#map} Заполняя карту травой
-	 * {@link textures.covering.Grass}, а по краям устанавливает стену
-	 * {@link textures.walls.Wall} Размеры травы и стены - размер ячейки.
+	 * {@link textures1.covering.Grass}, а по краям устанавливает стену
+	 * {@link textures1.walls.Wall} Размеры травы и стены - размер ячейки.
 	 * 
 	 * @param width
 	 *            - количество столбцов в массиве

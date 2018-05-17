@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import map.Map;
-import textures.Cell;
+import textures1.Cell;
 /**
  * Класс отвечающий за сохранение КАРТЫ в игре {@link map.Map}
  * Сохрание и загрузка происходит в корневую папку в файле "game.sav"
